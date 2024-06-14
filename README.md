@@ -281,3 +281,96 @@ true
 false
 true
 
+
+# Adding a single element
+
+```
+main() {
+  var listOfVegetables = ['potato', 'carrot', 'cucumber'];
+
+  listOfVegetables.add('cabbage');
+
+  print(listOfVegetables);
+}
+```
+
+# Adding multiple elements
+
+```
+// First method
+listName.addAll([elem 1, elem 2, ..., elem n])
+// Second method
+listName.addAll(otherListName)
+```
+
+```
+main() {
+  var listOfVegetables = ['potato', 'carrot', 'cucumber', 'cabbage'];
+
+  listOfVegetables.addAll(['broccoli', 'zucchini']); 
+
+  print(listOfVegetables);
+
+  var vegetablesToAdd = ['okra', 'capsicum'];
+
+  listOfVegetables.addAll(vegetablesToAdd);
+
+  print(listOfVegetables);
+}
+```
+
+Output
+
+[potato, carrot, cucumber, cabbage, broccoli, zucchini]
+[potato, carrot, cucumber, cabbage, broccoli, zucchini, okra, capsicum]
+
+# Removing a single element
+
+```
+main() {
+  var listOfVegetables = ['potato', 'carrot', 'cucumber', 'cabbage', 'broccoli', 'zucchini'];
+
+  listOfVegetables.removeAt(0);
+  print(listOfVegetables);
+
+  listOfVegetables.removeAt(2);
+  print(listOfVegetables);
+}
+```
+
+Output
+
+[carrot, cucumber, cabbage, broccoli, zucchini]
+
+[carrot, cucumber, broccoli, zucchini]
+
+# Removing all elements
+
+```
+main() {
+  var listOfVegetables = ['cucumber', 'zucchini'];
+
+  listOfVegetables.clear();
+
+  print(listOfVegetables);
+}
+```
+
+# The map() Method
+
+```
+main() {
+  var integers = [1,2,3];
+  var cubes = integers.map((integer) => integer * integer * integer).toList();
+  print(cubes);
+}
+```
+
+# Creating a set
+```
+main() {
+  var simpleSet = {1,2,3};
+
+  print(simpleSet);
+}
+```
